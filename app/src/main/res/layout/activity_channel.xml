@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.ChannelActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_saved_channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:layout_below="@+id/rv_saved_channel"
+        android:layout_margin="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/icon_search"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:src="@drawable/icon_search"
+            android:contentDescription="@string/image" />
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_channels"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:background="@null"
+            android:layout_toEndOf="@+id/icon_search"
+            android:padding="@dimen/_8sdp"
+            android:autofillHints="username" />
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/icon_logo"
+            android:visibility="visible"
+            android:rotation="90"
+            android:contentDescription="@string/image" />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_below="@id/search_layout"
+        android:layout_above="@+id/btn_watch_videos"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/result_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/search_your_favorite_channels"
+        android:visibility="gone"
+        android:layout_below="@id/search_layout"
+        android:layout_above="@+id/btn_watch_videos"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:textSize="@dimen/_16ssp"
+        style="@style/text_large_medium" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchedChannels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_layout"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/bottom_progress" />
+
+    <ProgressBar
+        android:id="@+id/bottom_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:visibility="gone"
+        android:layout_above="@+id/btn_watch_videos"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_watch_videos"
+        style="@style/btn_normal"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:visibility="gone"
+        android:text="@string/watch_videos" />
+
+</RelativeLayout>

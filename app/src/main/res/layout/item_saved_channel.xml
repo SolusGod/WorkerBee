@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_90sdp"
+    android:layout_height="@dimen/_90sdp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@drawable/circle_shadow"
+            android:contentDescription="@string/image"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_place_holder"
+            app:shapeAppearanceOverlay="@style/circle_shape_image" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_remove"
+        android:layout_width="@dimen/_23sdp"
+        android:layout_height="@dimen/_23sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_6sdp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/icon_remove" />
+
+</RelativeLayout>

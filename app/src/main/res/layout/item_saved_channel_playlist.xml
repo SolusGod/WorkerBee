@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_60sdp"
+    android:layout_height="@dimen/_60sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/_3sdp"
+        android:background="@drawable/circle_shadow"
+        android:contentDescription="@string/image"
+        android:elevation="@dimen/_5sdp"
+        android:padding="@dimen/_2sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_place_holder"
+        app:shapeAppearanceOverlay="@style/circle_shape_image" />
+
+
+</RelativeLayout>
